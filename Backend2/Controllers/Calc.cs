@@ -30,9 +30,11 @@ namespace Backend2.Controllers
         {
             return View();
         }
+
         [HttpPost]
-        public IActionResult ManualWithSeparateHandlers(Actions actions)
+        public IActionResult ManualWithSeparateHandlers(string str)
         {
+            Actions actions = new Actions();
             actions.val1 = Request.Form["val1"];
             actions.val2 = Request.Form["val2"];
             actions.oper = Request.Form["oper"];
